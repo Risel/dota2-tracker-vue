@@ -1,30 +1,44 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <default-layout>
+    <router-view/>
+  </default-layout>
 </template>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
   text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  box-sizing: border-box;
 }
 </style>
+<script>
+import DefaultLayout from '@/layouts/DefaultLayout.vue';
+import {
+  mapActions, mapGetters,
+} from 'vuex';
+
+export default {
+  components: {
+    DefaultLayout,
+  },
+  methods: {
+    ...mapActions([
+      'fetchMatches',
+      'fetchTeams',
+    ]),
+  },
+  computed: {
+    ...mapGetters([
+      'MATCHES',
+      'TEAMS',
+    ]),
+  },
+  mounted() {
+    this.fetchMatches();
+    this.fetchTeams();
+  },
+};
+</script>
