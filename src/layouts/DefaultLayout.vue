@@ -1,24 +1,6 @@
 <template>
   <header class="main__header">
-    <nav>
-      <div class="navbar">
-        <div class="container nav-container">
-          <div class="hamburger-lines">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
-          </div>
-          <div class="menu">
-            <router-link to="/matches">Список матчей</router-link>
-            <router-link to="/teams">Список команд</router-link>
-          </div>
-          <router-link to="/">
-            <img src="@/assets/logo.svg" alt="logo">
-          </router-link>
-        </div>
-      </div>
-    </nav>
-
+    <SideBar/>
   </header>
   <slot></slot>
   <footer class="main__footer">
@@ -39,7 +21,7 @@
       target="_blank">
         Документация API
       </a>
-      <button class="main__footer-links_button">
+      <button class="main__footer-links_button" @click="scrollTop">
         <img src="@/assets/arrow.svg" alt="scoll up">
       </button>
     </div>
@@ -47,8 +29,19 @@
 </template>
 
 <script>
+import SideBar from '@/components/SideBar.vue';
+
 export default {
   name: 'DefaultLayout',
+  components: { SideBar },
+  methods: {
+    scrollTop() {
+      return window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    },
+  },
 };
 </script>
 
@@ -60,34 +53,8 @@ html {
   background-position: top;
   background-size: contain;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: relative;
-}
-.container {
-  max-width: 1050px;
-  width: 90%;
-  margin: auto;
-}
-.navbar {
-  width: 100%;
-  .menu {
-    display: flex;
-  }
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 700;
-      transition: all 0.2s ease;
-      &:hover {
-        color: $green-color
-      }
-    }
-  }
 }
 
 .main__header {
