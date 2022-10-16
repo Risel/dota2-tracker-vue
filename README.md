@@ -1,24 +1,33 @@
-# dota-tracking-vue
 
-## Project setup
-```
+# Dota 2 Tracker
+
+
+
+
+### Project installation:
+```bash
+https://github.com/Risel/dota2-tracker-vue.git
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
+Node v16.14.0
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Tech Stack
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+**Client:** Vue, Vuex, SCSS, axios, Vue-router
+
+
+
+## Design
+
+- [Дизайн проекта](https://www.figma.com/file/pK6SrWkafU4LaE5krZXPGH/OpenDota---dashboard?node-id=79%3A1713)
+
+
+
+## Список реализованных функций
+
+- Роутинг по проекту
+- Динамическое обновление данных с АПИ
+- Детальная информация о матче
+
