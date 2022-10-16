@@ -11,7 +11,10 @@
         :row_data="row"
       />
     </div>
-      <v-button v-if="this.elementsPerPage !== this.data.length" @click="loadMore">
+      <v-button class="table__button"
+                v-if="this.elementsPerPage !== this.data.length"
+                @click="loadMore"
+      >
         Загрузить ещё
       </v-button>
     <div v-else style="margin-top:50px"></div>
@@ -20,12 +23,12 @@
 
 <script>
 import vTableRow from '@/components/vTable/vTableRow.vue';
-import VButton from '@/components/vButton.vue';
+import vButton from '@/components/vButton.vue';
 
 export default {
   name: 'vTable',
   components: {
-    VButton,
+    vButton,
     vTableRow,
   },
   data() {
@@ -88,6 +91,9 @@ export default {
     padding: 0 30px;
     display: flex;
     justify-content: space-between;
+  }
+  &__button {
+    margin: 2.5rem auto;
   }
 }
 </style>

@@ -34,8 +34,6 @@
           <img src="@/assets/logo.svg" alt="logo">
         </router-link>
       </div>
-    <transition name="fade">
-
     <div class="hamburger-menu" v-if="show">
       <div  class="hamburger-menu__box">
         <ul>
@@ -55,8 +53,7 @@
           </li>
         </ul>
       </div>
-        </div>
-      </transition>
+    </div>
   </nav>
 
 </template>
@@ -77,6 +74,16 @@ nav {
   position: fixed;
   left: 0;
   height: 100%;
+}
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-active {
+  padding-left: 10px;
+  opacity: 0;
 }
 .toggler {
   position: relative;

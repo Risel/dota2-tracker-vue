@@ -1,6 +1,6 @@
 <template>
   <header class="main__header">
-    <SideBar/>
+    <SideBar v-if="this.$route.path !== '/'"/>
   </header>
   <div class="main__wrapper">
     <slot></slot>

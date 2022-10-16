@@ -1,7 +1,7 @@
 <template>
-  <default-layout>
-    <router-view/>
-  </default-layout>
+    <default-layout>
+      <router-view/>
+    </default-layout>
 </template>
 
 <style lang="scss">
@@ -13,6 +13,7 @@
   text-align: center;
   box-sizing: border-box;
 }
+
 </style>
 <script>
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
