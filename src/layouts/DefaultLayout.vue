@@ -2,7 +2,9 @@
   <header class="main__header">
     <SideBar/>
   </header>
-  <slot></slot>
+  <div class="main__wrapper">
+    <slot></slot>
+  </div>
   <footer class="main__footer">
     <div class="main__footer-text">2022© OpenDota</div>
     <div class="main__footer-links">
@@ -46,29 +48,33 @@ export default {
 </script>
 
 <style lang="scss">
-html {
+html,body {
   background-image: url("../assets/bg.png");
   background-color: $background-color;
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
-  width: 100vw;
-  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+.main__wrapper {
+  flex: 1 0 auto;
+}
 .main__header {
   display: flex;
+  flex: 0 0 auto;
   flex-direction: row;
-  img {
-    margin-left: 1rem;
-    cursor: pointer;
-  }
 }
 .main__footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  flex: 0 0 auto;
   width: 100%;
   height: 70px;
   background-color: $footer-color;

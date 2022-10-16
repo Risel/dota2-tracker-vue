@@ -26,18 +26,15 @@ export default {
   },
   methods: {
     ...mapActions([
-      'fetchMatches',
       'fetchTeams',
     ]),
   },
   computed: {
     ...mapGetters([
-      'MATCHES',
       'TEAMS',
     ]),
   },
-  mounted() {
-    this.fetchMatches();
+  created() {
     this.fetchTeams();
   },
 };
