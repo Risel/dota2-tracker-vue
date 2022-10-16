@@ -72,7 +72,9 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-
+  &-title {
+    color: $green-color;
+  }
   &-heroes {
     display: flex;
     flex-direction: row;
