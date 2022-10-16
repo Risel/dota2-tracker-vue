@@ -10,6 +10,7 @@ export default createStore({
   getters: {
     MATCHES: (state) => state.matches,
     TEAMS: (state) => state.teams,
+    MATCH: (state) => state.match,
   },
   mutations: {
     SET_MATCHES(state, matches) {
@@ -17,6 +18,9 @@ export default createStore({
     },
     SET_TEAMS(state, teams) {
       state.teams = teams;
+    },
+    SET_MATCH(state, match) {
+      state.match = match;
     },
   },
   actions: {
@@ -40,8 +44,15 @@ export default createStore({
         return error;
       }
     },
-    async fetchMatchById() {
-
-    }
+    async fetchMatchById({ commit }, id) {
+      try {
+        const data = await axios.get(`https://api.opendota.com/api/matches/${id}`);
+        commit('SET_MATCH', data.data);
+        return data;
+      } catch (error) {
+        console.log(error);
+        return error;
+      }
+    },
   },
 });

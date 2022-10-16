@@ -64,17 +64,16 @@ html,body {
   flex-direction: column;
   justify-content: space-between;
 }
-
 .main__wrapper {
-  flex: 1 0 auto;
+  min-height: 100vh;
 }
 .main__header {
   display: flex;
-  flex: 0 0 auto;
+  flex: 0 1 auto;
   flex-direction: row;
 }
 .main__footer {
-  flex: 0 0 auto;
+  flex: 0 1 auto;
   width: 100%;
   height: 70px;
   background-color: $footer-color;
