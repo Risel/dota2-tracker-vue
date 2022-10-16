@@ -5,6 +5,7 @@ export default createStore({
   state: {
     matches: [],
     teams: [],
+    match: {},
   },
   getters: {
     MATCHES: (state) => state.matches,
@@ -39,5 +40,8 @@ export default createStore({
         return error;
       }
     },
+    async fetchMatchById() {
+
+    }
   },
 });

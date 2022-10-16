@@ -17,7 +17,11 @@ const routes = [
     name: 'teams',
     component: () => import(/* webpackChunkName: "teams" */ '../views/TeamsView.vue'),
   },
-
+  {
+    path: '/matches/:id',
+    name: 'SingleMatch',
+    component: () => import(/* webpackChunkName: "SingleMatch" */ '../views/SingleMatch.vue'),
+  },
 ];
 
 const router = createRouter({
