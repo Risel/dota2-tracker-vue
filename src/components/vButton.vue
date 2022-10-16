@@ -22,6 +22,7 @@ export default {
   cursor: pointer;
   border: none;
   transition: all .2s ease;
+  display: flex;
   &:hover,:active {
     background-color: #e6e5e5;
   }
