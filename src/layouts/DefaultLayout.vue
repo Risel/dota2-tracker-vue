@@ -89,10 +89,18 @@ html,body {
   &-links {
     margin-right: 1rem;
     position: relative;
+
     &_link {
       color: $white-color;
       text-decoration: none;
       margin-right: 2.5rem;
+      @media screen and (max-width: 750px) {
+        margin-right: 1rem;
+        font-size: 12px;
+      }
+      @media screen and (max-width: 471px) {
+        font-size: 10px;
+      }
     }
     &_button {
       -webkit-appearance: none;
@@ -108,6 +116,10 @@ html,body {
       background-color: $button-bg;
       cursor: pointer;
       transition: all 0.3s ease;
+      @media screen and (max-width: 750px) {
+        width: 46px;
+        height: 46px;
+      }
       &:hover {
         background-color: $green-color;
       }

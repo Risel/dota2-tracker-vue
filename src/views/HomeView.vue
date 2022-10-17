@@ -78,8 +78,10 @@ export default {
     &-buttons {
       display: flex;
       flex-direction: row;
+      gap: 20px;
       @media screen and (max-width: 415px){
         flex-direction: column;
+        gap: 0;
         button {
           margin: 40px 0;
           &:nth-child(even) {
