@@ -95,6 +95,11 @@ export default {
       height: 50px;
       font-size: 14px;
     }
+    @media screen and (max-width: 660px){
+      padding: 0 10px;
+      height: 50px;
+      font-size: 11px;
+    }
   }
   &__button {
     margin: 2.5rem auto;

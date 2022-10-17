@@ -73,6 +73,12 @@ export default {
   flex-direction: column;
   align-items: center;
   text-align: left;
+  @media screen and (max-width: 800px){
+    font-size: 0.75rem;
+  }
+  @media screen and (max-width: 490px){
+    align-items: center;
+  }
   &__team {
     display: flex;
     flex-direction: row;
@@ -87,6 +93,9 @@ export default {
       padding: 25px 0;
       img {
         height: 100%;
+        @media screen and (max-width: 800px){
+          height: 80%;
+        }
       }
     }
     &-title {
@@ -96,6 +105,10 @@ export default {
         color: $green-color;
         margin-bottom: 0;
         font-size: 24px;
+        @media screen and (max-width: 800px){
+          font-size: 16px;
+          margin-right: 0.25rem;
+        }
       }
     }
   }
@@ -105,6 +118,9 @@ export default {
     width: 80%;
     background-color: black;
     border-radius: 15px;
+    @media screen and (max-width: 800px){
+      width: 60%;
+    }
     &_color {
       position: absolute;
       background-color: #7540F0;
@@ -119,6 +135,9 @@ export default {
     width: 80%;
     background-color: black;
     border-radius: 15px;
+    @media screen and (max-width: 800px){
+      width: 60%;
+    }
     &_color {
       position: absolute;
       background-color: $green-color;
@@ -133,6 +152,9 @@ export default {
     width: 80%;
     background-color: black;
     border-radius: 15px;
+    @media screen and (max-width: 800px){
+      width: 60%;
+    }
     &_color {
       position: absolute;
       background-color: $red-color;
