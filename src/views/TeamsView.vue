@@ -44,9 +44,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.teams {
-  @media screen and (max-width: 800px) {
-    font-size: 0.75rem;
-  }
-}
+
 </style>

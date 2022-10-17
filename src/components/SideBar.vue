@@ -74,6 +74,7 @@ nav {
   position: fixed;
   left: 0;
   height: 100%;
+  z-index: 10000;
 }
 .slide-fade-enter-active {
   transition: all .3s ease;

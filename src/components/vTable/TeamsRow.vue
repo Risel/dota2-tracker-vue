@@ -73,6 +73,7 @@ export default {
   flex-direction: column;
   align-items: center;
   text-align: left;
+  position: relative;
   @media screen and (max-width: 800px){
     font-size: 0.75rem;
   }
@@ -84,8 +85,8 @@ export default {
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    position: relative;
     align-items: center;
+    z-index: 1;
     &-logo {
       height: 45px;
       position: absolute;
@@ -95,6 +96,7 @@ export default {
         height: 100%;
         @media screen and (max-width: 800px){
           height: 80%;
+          z-index: 1;
         }
       }
     }
