@@ -55,6 +55,10 @@ a {
   &:nth-child(even) {
     border: 1px solid rgba(16, 0, 37, 0.15);
   }
+  @media screen and (max-width: 660px){
+    justify-content: space-around;
+    padding: 0;
+  }
   &:hover {
     background-color: #3e2474;
   }

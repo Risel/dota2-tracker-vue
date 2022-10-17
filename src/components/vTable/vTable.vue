@@ -81,7 +81,6 @@ export default {
   max-width: 900px;
   margin: 0 auto;
   color: $white-color;
-
   &__header {
     height: 60px;
     text-transform: uppercase;
@@ -91,6 +90,11 @@ export default {
     padding: 0 30px;
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 660px){
+      padding: 0 20px;
+      height: 50px;
+      font-size: 14px;
+    }
   }
   &__button {
     margin: 2.5rem auto;

@@ -72,6 +72,13 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  @media screen and (max-width: 660px){
+    font-size: 0.75rem;
+  }
+  @media screen and (max-width: 490px){
+    align-items: center;
+  }
+
   &-title {
     color: $green-color;
   }
@@ -86,6 +93,10 @@ export default {
       width: 2.25rem;
       height: 1.5rem;
       border-radius: 4px;
+      @media screen and (max-width: 890px){
+        width: 1.75rem;
+        height: 1.25rem;
+      }
     }
   }
 }
@@ -95,5 +106,8 @@ export default {
 }
 .radiant {
   margin-right: 0.5rem;
+  @media screen and (max-width: 660px){
+    margin-right: 0.25rem;
+  }
 }
 </style>
