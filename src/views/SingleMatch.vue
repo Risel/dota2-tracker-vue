@@ -207,7 +207,7 @@ export default {
       @media screen and (max-width: 660px){
         flex-direction: column;
         button {
-          margin: 30px 0;
+          margin: 30px auto;
           &:nth-child(even) {
             margin-top: 0;
           }
