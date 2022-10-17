@@ -95,7 +95,15 @@ nav {
   z-index: 1000;
   .logo {
     margin-left: 1rem;
-    cursor: pointer;
+    position: relative;
+    @media screen and (max-width: 800px){
+      position: absolute;
+      left: 30vw;
+    }
+    @media screen and (max-width: 580px){
+      position: absolute;
+      left: 20vw;
+    }
   }
   svg {
     cursor: pointer;
@@ -121,6 +129,10 @@ nav {
   justify-content: center;
   flex-direction: column;
   background-color: $violet-color;
+  @media screen and (max-width: 800px){
+    min-width: 100vw;
+    opacity: 1;
+  }
   &__box {
     width: 100%;
     list-style: none;
@@ -129,9 +141,15 @@ nav {
       align-items: center;
       justify-content: space-between;
       height: 70px;
+      @media screen and (max-width: 800px){
+        justify-content: center;
+      }
       img {
         transform: rotate(90deg);
         margin-right: 20px;
+        @media screen and (max-width: 800px){
+          margin-left: 1rem;
+        }
       }
       a {
         text-decoration: none;
