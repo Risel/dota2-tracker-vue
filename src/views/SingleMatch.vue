@@ -132,6 +132,11 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
     &-winner {
       background-color: #fff;
       font-weight: 700;
@@ -192,10 +197,22 @@ export default {
     &-warning {
       font-size: 14px;
       color: #EECD00;
+      @media screen and (max-width: 800px){
+        margin-top: 1rem;
+      }
     }
     &-buttons {
       display: flex;
       justify-content: space-evenly;
+      @media screen and (max-width: 660px){
+        flex-direction: column;
+        button {
+          margin: 30px 0;
+          &:nth-child(even) {
+            margin-top: 0;
+          }
+        }
+      }
       img {
         margin-right: 0.75rem;
       }
